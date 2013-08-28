@@ -43,6 +43,7 @@ def police_map(releases, echo=False):
                 if echo:
                     print "Noncompliant package: {} Version string: {}". \
                           format(package, version)
+    for package in releases:
         match = re.search(antipattern, package)
         if match:
             ambiguous.append(package)
